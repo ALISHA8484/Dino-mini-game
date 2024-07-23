@@ -6,6 +6,7 @@
 #include <QGraphicsScene>
 #include <QKeyEvent>
 #include <QGraphicsPixmapItem>
+#include "dinasor.h"
 class MainWindow : public QGraphicsView
 {
     Q_OBJECT
@@ -13,6 +14,7 @@ class MainWindow : public QGraphicsView
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    Dinasor* D;
 public slots:
     void creatCloud();
     void creatCactus();

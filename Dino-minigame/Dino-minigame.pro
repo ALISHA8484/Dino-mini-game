@@ -11,6 +11,7 @@ CONFIG += c++17
 SOURCES += \
     cactus.cpp \
     cloud.cpp \
+    dinasor.cpp \
     ground.cpp \
     main.cpp \
     mainwindow.cpp
@@ -18,6 +19,7 @@ SOURCES += \
 HEADERS += \
     cactus.h \
     cloud.h \
+    dinasor.h \
     ground.h \
     mainwindow.h
 

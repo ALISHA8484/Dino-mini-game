@@ -3,5 +3,8 @@
         <file>Images/cloud2.png</file>
         <file>Images/Cactus1.png</file>
         <file>Images/Ground.png</file>
+        <file>Images/Dinasor1.png</file>
+        <file>Images/Dinasor2.png</file>
+        <file>Images/Dinasor3.png</file>
     </qresource>
 </RCC>

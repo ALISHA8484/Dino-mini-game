@@ -28,6 +28,9 @@ MainWindow::MainWindow(QWidget *parent)
     checkGround = new QTimer();
     connect(checkGround,&QTimer::timeout,this,&MainWindow::creatGround);
     checkGround->start(5);
+    //
+    D = new Dinasor();
+    view->addItem(D);
 }
 
 void MainWindow::creatCloud(){
