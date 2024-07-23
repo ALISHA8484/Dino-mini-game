@@ -1,0 +1,19 @@
+/build/
+/dist/
+/out/
+
+# Ignore compiled files
+*.o
+*.so
+*.exe
+*.dll
+*.class
+*.pyc
+*.pyo
+
+# Ignore logs
+*.log
+
+# Ignore temporary files
+*.tmp
+*.temp
