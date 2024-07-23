@@ -6,12 +6,6 @@
 #include <QGraphicsScene>
 #include <QKeyEvent>
 #include <QGraphicsPixmapItem>
-QT_BEGIN_NAMESPACE
-namespace Ui {
-class MainWindow;
-}
-QT_END_NAMESPACE
-
 class MainWindow : public QGraphicsView
 {
     Q_OBJECT
@@ -19,8 +13,12 @@ class MainWindow : public QGraphicsView
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-
+public slots:
+    void creatCloud();
+    void creatCactus();
 private:
     QGraphicsScene *view;
+    QTimer* checkClouds;
+    QTimer* checkCactus;
 };
 #endif // MAINWINDOW_H
