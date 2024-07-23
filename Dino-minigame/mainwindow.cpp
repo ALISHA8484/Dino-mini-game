@@ -133,7 +133,12 @@ void MainWindow::Lose(){
     textItem->setDefaultTextColor(Qt::red);
 
 }
-
+void MainWindow::keyPressEvent(QKeyEvent* K){
+    if(K->key()==Qt::Key_Space && D->situation=="Stable"){
+        D->situation="Up";
+        D->setPixmap(D->Frame.at(0));
+    }
+}
 MainWindow::~MainWindow()
 {
 

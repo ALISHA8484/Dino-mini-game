@@ -29,5 +29,6 @@ private:
     QTimer* checkGround;
     QTimer* addScore;
     QTimer* LoseCheck;
+    void keyPressEvent(QKeyEvent* K);
 };
 #endif // MAINWINDOW_H
