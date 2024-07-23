@@ -2,7 +2,7 @@
 #include "cloud.h"
 #include "cactus.h"
 #include <QRandomGenerator>
-
+#include "ground.h"
 int RandomGenarating(int min,int max){
     return QRandomGenerator::global()->bounded(min,max+1);
 }
@@ -22,8 +22,14 @@ MainWindow::MainWindow(QWidget *parent)
     checkCactus = new QTimer();
     connect(checkCactus,&QTimer::timeout,this,&MainWindow::creatCactus);
     checkCactus->start(6000);
-
+    //
+    Ground* G = new Ground();
+    view->addItem(G);
+    checkGround = new QTimer();
+    connect(checkGround,&QTimer::timeout,this,&MainWindow::creatGround);
+    checkGround->start(5);
 }
+
 void MainWindow::creatCloud(){
     if(Cloud::count<6  ){
         Cloud* newC = new Cloud();
@@ -35,8 +41,16 @@ void MainWindow::creatCactus(){
     view->addItem(newCa);
     checkCactus->stop();
     checkCactus->start(RandomGenarating(Cactus::speed*300,6000));
-
 }
+void MainWindow::creatGround(){
+    if(Ground::empty==true){
+        Ground* newG = new Ground();
+        newG->setPos(890,480);
+        view->addItem(newG);
+        Ground::empty=false;
+    }
+}
+
 MainWindow::~MainWindow()
 {
 

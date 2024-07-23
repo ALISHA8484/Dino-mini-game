@@ -16,9 +16,11 @@ public:
 public slots:
     void creatCloud();
     void creatCactus();
+    void creatGround();
 private:
     QGraphicsScene *view;
     QTimer* checkClouds;
     QTimer* checkCactus;
+    QTimer* checkGround;
 };
 #endif // MAINWINDOW_H

@@ -11,12 +11,14 @@ CONFIG += c++17
 SOURCES += \
     cactus.cpp \
     cloud.cpp \
+    ground.cpp \
     main.cpp \
     mainwindow.cpp
 
 HEADERS += \
     cactus.h \
     cloud.h \
+    ground.h \
     mainwindow.h
 
 FORMS +=
